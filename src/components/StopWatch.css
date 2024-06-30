@@ -1,0 +1,118 @@
+body { 
+    margin: 0; 
+    padding: 0; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    background: linear-gradient(135deg, #f0f0f0, #c4dbe0); 
+    font-family: Arial, sans-serif; 
+} 
+  
+.container { 
+    padding: 40px; 
+    border: 1px solid #ced4da; 
+    border-radius: 10px; 
+    background: #ffffff; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); 
+    margin: 10px; 
+    width: 100%; 
+    max-width: 450px; 
+    box-sizing: border-box; 
+    transition: transform 0.3s, box-shadow 0.3s;
+} 
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+  
+.timeDisplay { 
+    padding: 25px; 
+    font-size: 36px; 
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); 
+    border-radius: 0.25em; 
+    text-align: center; 
+    background: #f8f9fa;
+} 
+  
+.buttons { 
+    display: flex; 
+    justify-content: center; 
+    margin-top: 25px; 
+} 
+  
+button.btn { 
+    padding: 12px 25px; 
+    outline: none; 
+    border: 1px solid #ced4da; 
+    margin: 5px; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    background: #28a745; 
+    color: #fff; 
+    font-size: 18px; 
+    transition: all 0.3s; 
+} 
+  
+button.btn:hover { 
+    background-color: #218838; 
+} 
+
+button.btn:active {
+    background-color: #1e7e34;
+    transform: translateY(2px);
+}
+  
+.laps { 
+    margin-top: 25px; 
+} 
+  
+.laps h3 { 
+    text-align: left; 
+    display: flex; 
+    justify-content: space-between; 
+    margin: 10px; 
+    font-size: 22px;
+    font-weight: bold;
+} 
+  
+.laps ul { 
+    list-style-type: none; 
+    padding: 0; 
+} 
+  
+.laps li { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin: 5px 10px 15px 10px; 
+    font-size: 20px;
+} 
+  
+@media screen and (max-width: 420px) { 
+    .buttons { 
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .timeDisplay {
+        font-size: 28px;
+    }
+
+    button.btn {
+        font-size: 14px;
+    }
+
+    .laps h3 {
+        font-size: 18px;
+    }
+
+    .laps li {
+        font-size: 16px;
+    }
+}
